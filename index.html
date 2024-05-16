@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Loja DBZ</title>
+    <link rel="icon" type="image/x-icon" href="#"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet"/>
+    <script src="js/bd2.js"></script>
+</head>
+<body>
+  <style>
+    body {
+        background-image: url("img/Dragon-Ball-1.jpg");
+        background-size: cover;
+    }
+</style>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">DragonMugs</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="cadastro.html">Fazer cadastro</a></li>
+                <li class="nav-item"><a class="nav-link" href="#!">Sobre</a></li>
+            </ul>
+            <form class="d-flex">
+                <button class="btn btn-outline-dark" type="button" onclick="location.href='carrinho.html'">
+                    <i class="bi-cart-fill me-1"></i>
+                    Carrinho
+                    <span id="cart-count" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                </button>                        
+            </form>
+        </div>
+    </div>
+</nav>
+<!-- Header-->
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">DragonMugs Store</h1>
+            <p class="lead fw-normal text-white-50 mb-0">As Melhores Canecas de DBZ!</p>
+        </div>
+    </div>
+</header>
+<!-- Section de Produtos -->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <!-- Produto: Caneca Goku -->
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Imagem do Produto -->
+                    <img class="card-img-top" src="img/dbz_GokuLoiro.png" alt="Caneca Goku" />
+                    <!-- Detalhes do Produto -->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Nome do Produto -->
+                            <h5 class="fw-bolder">Caneca Goku</h5>
+                            <!-- Preço do Produto -->
+                            R$40.00
+                        </div>
+                    </div>
+                    <!-- Ações do Produto -->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <!-- Botão Adicionar ao Carrinho -->
+                            <a class="btn btn-outline-dark mt-auto" href="#" onclick="adicionarAoCarrinho('goku', 'Caneca Goku', 40.00)">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto: Caneca Trunks (Adicionando outro produto) -->
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Imagem do Produto -->
+                    <img class="card-img-top" src="img/dbz_Trunks.png" alt="Caneca Trunks" />
+                    <!-- Detalhes do Produto -->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Nome do Produto -->
+                            <h5 class="fw-bolder">Caneca Trunks</h5>
+                            <!-- Preço do Produto -->
+                            <span class="text-muted text-decoration-line-through">R$50.00</span>
+                            R$18.00
+                        </div>
+                    </div>
+                    <!-- Ações do Produto -->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <!-- Botão Adicionar ao Carrinho -->
+                            <a class="btn btn-outline-dark mt-auto" href="#" onclick="adicionarAoCarrinho('trunks', 'Caneca Trunks', 18.00)">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- Produto: Caneca Freeza -->
+<div class="col mb-5">
+    <div class="card h-100">
+        <!-- Imagem do Produto -->
+        <img class="card-img-top" src="img/dbz_Freeza.png" alt="Caneca Freeza" />
+        <!-- Detalhes do Produto -->
+        <div class="card-body p-4">
+            <div class="text-center">
+                <!-- Nome do Produto -->
+                <h5 class="fw-bolder">Caneca Freeza</h5>
+                <!-- Preço do Produto -->
+                R$50.00
+            </div>
+        </div>
+        <!-- Ações do Produto -->
+        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+                <!-- Botão Adicionar ao Carrinho -->
+                <a class="btn btn-outline-dark mt-auto" href="#" onclick="adicionarAoCarrinho('freeza', 'Caneca Freeza', 50.00)">Adicionar ao Carrinho</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Produto: Caneca Cell -->
+<div class="col mb-5">
+    <div class="card h-100">
+        <!-- Imagem do Produto -->
+        <img class="card-img-top" src="img/dbz_Cell.png" alt="Caneca Cell" />
+        <!-- Detalhes do Produto -->
+        <div class="card-body p-4">
+            <div class="text-center">
+                <!-- Nome do Produto -->
+                <h5 class="fw-bolder">Caneca Cell</h5>
+                <!-- Preço do Produto -->
+                <span class="text-muted text-decoration-line-through">R$50.00</span>
+                R$45.00
+            </div>
+        </div>
+        <!-- Ações do Produto -->
+        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+                <!-- Botão Adicionar ao Carrinho -->
+                <a class="btn btn-outline-dark mt-auto" href="#" onclick="adicionarAoCarrinho('cell', 'Caneca Cell', 45.00)">Adicionar ao Carrinho</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Produto: Caneca Goku SSJ3 -->
+<div class="col mb-5">
+    <div class="card h-100">
+        <!-- Imagem do Produto -->
+        <img class="card-img-top" src="img/dbz_GokuCabeludo.png" alt="Caneca Goku SSJ3" />
+        <!-- Detalhes do Produto -->
+        <div class="card-body p-4">
+            <div class="text-center">
+                <!-- Nome do Produto -->
+                <h5 class="fw-bolder">Caneca Goku SSJ3</h5>
+                <!-- Preço do Produto -->
+                <span class="text-muted text-decoration-line-through">R$120.00</span>
+                R$100.00
+            </div>
+        </div>
+        <!-- Ações do Produto -->
+        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+                <!-- Botão Adicionar ao Carrinho -->
+                <a class="btn btn-outline-dark mt-auto" href="#" onclick="adicionarAoCarrinho('goku_ssj3', 'Caneca Goku SSJ3', 100.00)">Adicionar ao Carrinho</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Produto: Caneca Jiren -->
+<div class="col mb-5">
+    <div class="card h-100">
+        <!-- Imagem do Produto -->
+        <img class="card-img-top" src="img/dbz_Jiren.png" alt="Caneca Jiren" />
+        <!-- Detalhes do Produto -->
+        <div class="card-body p-4">
+            <div class="text-center">
+                <!-- Nome do Produto -->
+                <h5 class="fw-bolder">Caneca Jiren</h5>
+                <!-- Preço do Produto -->
+                R$50.00
+            </div>
+        </div>
+        <!-- Ações do Produto -->
+        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+                <!-- Botão Adicionar ao Carrinho -->
+                <a class="btn btn-outline-dark mt-auto" href="#" onclick="adicionarAoCarrinho('jiren', 'Caneca Jiren', 50.00)">Adicionar ao Carrinho</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Produto: Caneca Bills -->
+<div class="col mb-5">
+    <div class="card h-100">
+        <!-- Imagem do Produto -->
+        <img class="card-img-top" src="img/dbz_Bills.png" alt="Caneca Bills" />
+        <!-- Detalhes do Produto -->
+        <div class="card-body p-4">
+            <div class="text-center">
+                <!-- Nome do Produto -->
+                <h5 class="fw-bolder">Caneca Bills</h5>
+                <!-- Preço do Produto -->
+                R$50.00
+            </div>
+        </div>
+        <!-- Ações do Produto -->
+        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+                <!-- Botão Adicionar ao Carrinho -->
+                <a class="btn btn-outline-dark mt-auto" href="#" onclick="adicionarAoCarrinho('bills', 'Caneca Bills', 50.00)">Adicionar ao Carrinho</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Produto: Caneca Broly -->
+<div class="col mb-5">
+    <div class="card h-100">
+        <!-- Imagem do Produto -->
+        <img class="card-img-top" src="img/dbz_Broly.png" alt="Caneca Broly" />
+        <!-- Detalhes do Produto -->
+        <div class="card-body p-4">
+            <div class="text-center">
+                <!-- Nome do Produto -->
+                <h5 class="fw-bolder">Caneca Broly</h5>
+                <!-- Preço do Produto -->
+                <span class="text-muted text-decoration-line-through">R$50.00</span>
+                R$49.99
+            </div>
+        </div>
+        <!-- Ações do Produto -->
+        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+                <!-- Botão Adicionar ao Carrinho -->
+                <a class="btn btn-outline-dark mt-auto" href="#" onclick="adicionarAoCarrinho('broly', 'Caneca Broly', 49.99)">Adicionar ao Carrinho</a>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<footer class="py-5 bg-dark">
+    <div class="container"><p class="m-0 text-center text-white">Copyright &copy; DragonMugs 2024. Desenvolvido por Rafaela Lima e Vinicius Soares</p></div>
+</footer>
+
+</body>
+</html>

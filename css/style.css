@@ -1,0 +1,57 @@
+body{
+    padding-top: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(248, 248, 248);
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.login{
+    margin: 0 auto;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    width: 350px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+.login label{
+    color: black;
+}
+
+.login h1{
+    padding-bottom: 20px;
+    color: black;
+}
+
+.formcadastro{
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+}
+
+.formcadastro h1{
+    color: white;
+    text-shadow: .1em 0.1em 1.3em black;
+}
+
+.cadastro{
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+.cadastro label{
+    color: black;
+}
+
+.headercarrinho{
+    width: 50px;
+}
