@@ -1,12 +1,15 @@
-
 // carregar banco de dados do sistema (cadastro/login)
  function loadBanco(){
-    let banco = [ { "id":1,"nome":"admin","email": "admin@teste.com", "senha":123 }
+    let banco = JSON.parse(localStorage.getItem("banco"))
+    if (banco === null){
+        let banco = [ { "id":1,"nome":"admin","email": "admin@teste.com", "senha":123 }
 
-                ]
-    let b = JSON.stringify(banco);
-    localStorage.setItem("banco", b)
-    return banco;
+        ]
+        let b = JSON.stringify(banco);
+        localStorage.setItem("banco", b)
+        return banco;
+    }
+    return banco 
  }   
     
 function adicionar() {
@@ -40,19 +43,13 @@ function login(){
     let senha = document.querySelector("#senha").value
 
     for (let i = 0; dados.length > i; i++) {
-        if (dados[i] == null) {
-           alert("Verificando")
-        } else {
-          if (login == dados[i].email && senha == dados[i].senha) {
+        if (login == dados[i].email && senha == dados[i].senha) {
             console.log("conectado")
             let n = JSON.stringify(dados[i]);
             sessionStorage.setItem("user", n)
             let url = "index.html"
             window.open(url)
             break
-          }    else {
-                alert("Login ou senha inválidos.")
-          }
         } 
     }
 }
