@@ -10827,3 +10827,8 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+.banner img{
+  width: 100%;
+  height: 440px;
+}
